@@ -1,0 +1,112 @@
+:root {
+  /* Team accent color. Changing this recolors the whole page. */
+  --accent: #6c5ce7;
+
+  --bg: #f7f7fb;
+  --surface: #ffffff;
+  --text: #1e1e2e;
+  --muted: #6b6b80;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero {
+  padding: 64px 24px 48px;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.hero h1 {
+  margin: 8px 0;
+  font-size: clamp(32px, 6vw, 56px);
+}
+
+.tagline {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: -24px auto 48px;
+  padding: 0 24px;
+}
+
+.card {
+  padding: 24px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.card h2 {
+  margin: 12px 0 4px;
+  font-size: 20px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.role {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.fact {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card--empty {
+  background: transparent;
+  border: 2px dashed var(--muted);
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+.card--empty .avatar {
+  background: var(--muted);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
